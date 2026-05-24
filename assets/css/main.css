@@ -8603,7 +8603,7 @@ input, select, textarea {
 			}
 
 .appom-image {
-  max-width: 70% !important;
+  max-width: 100% !important;
   max-height: 500px;
   object-fit: contain;
   display: block;
@@ -8617,4 +8617,79 @@ p.major {
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.image video {
+  width: 90%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.media-box {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.appom-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*background: rgba(245,242,235,0.95);*/
+  display: flex;
+  justify-content: left;
+  gap: 25px;
+  padding: 15px 25px;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.appom-nav a {
+  text-decoration: none;
+  color: #8B5E3C;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.appom-nav a:hover {
+  color: #C58B57;
+}
+
+.appom-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #8B5E3C;
+  color: rgba(139, 94, 60, 0.8);
+  margin-top: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.appom-header {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; /* important for mobile */
+}
+
+.appom-header h1 {
+  margin: 0;
+  font-size: 48px;
+  letter-spacing: 4px;
+}
+
+.section-title {
+  margin-top: 80px;
 }
