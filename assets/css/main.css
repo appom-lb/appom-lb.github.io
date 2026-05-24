@@ -8706,29 +8706,20 @@ p.major {
   color: #8B5E3C;
 }
 
-/* mobile styles */
 @media (max-width: 768px) {
 
-  .menu-toggle {
-    display: block;
-  }
-
   .appom-nav {
-    display: none;
-    flex-direction: column;
+    display: none !important;
+    flex-direction: column !important;
     position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
     background: rgba(245,242,235,0.98);
-    padding: 15px;
+    z-index: 99999;
   }
 
   .appom-nav.active {
-    display: flex;
-  }
-
-  .appom-nav a {
-    padding: 10px 0;
+    display: flex !important;
   }
 }
