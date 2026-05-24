@@ -8691,5 +8691,44 @@ p.major {
 }
 
 .section-title {
-  margin-top: 80px;
+  margin-top: 60px;
+}
+
+/* hide toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 100000;
+  color: #8B5E3C;
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .appom-nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(245,242,235,0.98);
+    padding: 15px;
+  }
+
+  .appom-nav.active {
+    display: flex;
+  }
+
+  .appom-nav a {
+    padding: 10px 0;
+  }
 }

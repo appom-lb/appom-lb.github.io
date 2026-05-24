@@ -12,16 +12,26 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<script>
+		function toggleMenu() {
+		  document.getElementById("appomNav").classList.toggle("active");
+		}
+	</script>
 	<body class="is-preload">
 			<!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<nav class="appom-nav">
-		  <a href="#story">Home</a>
-		  <a href="#story">Our Story</a>
-		  <a href="#village">Our Village</a>
-		  <a href="#product">Products</a>
-		  <a href="#contact">Contact</a>
-		</nav>
+			
+			<div class="menu-toggle" onclick="toggleMenu()">
+			  ☰
+			</div>
+
+			<nav class="appom-nav" id="appomNav">
+			  <a href="#story">Home</a>
+			  <a href="#story">Our Story</a>
+			  <a href="#village">Our Village</a>
+			  <a href="#product">Products</a>
+			  <a href="#contact">Contact</a>
+			</nav>
 				<!-- One -->
 					<section id="story" class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
