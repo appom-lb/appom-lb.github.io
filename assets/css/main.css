@@ -8731,3 +8731,11 @@ p.major {
     order: 2 !important;
   }
 }
+
+.gallery article .image img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #fff;
+    display: block;
+}
