@@ -6,35 +6,46 @@
 -->
 <html>
 	<head>
-		<title>A P P O M Traditional Lebanese Natural Products </title>
+		<title>APPOM — Traditional Lebanese Natural Products</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="APPOM — Artisan natural products from Kfardebian, Lebanon. Handcrafted with ancestral traditions." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<!-- Google Font -->
-		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/main.css">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 	</head>
 	<body class="is-preload">
 			<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 			
-			<div class="menu-toggle" onclick="toggleMenu()">
-			  ☰
+			<div class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">
+			  <span></span><span></span><span></span>
 			</div>
 
 			<nav class="appom-nav" id="appomNav">
-			  <a href="#story">Home</a>
-			  <a href="#story">Our Story</a>
-			  <a href="#village">Our Village</a>
-			  <a href="#product">Products</a>
-			  <a href="#gallery">Gallery Store</a>
-			  <a href="#contact">Contact</a>
+			  <div class="nav-brand">APPOM</div>
+			  <div class="nav-links">
+				<a href="#story">Home</a>
+				<a href="#story">Our Story</a>
+				<a href="#village">Our Village</a>
+				<a href="#product">Products</a>
+				<a href="#gallery">Gallery Store</a>
+				<a href="#contact">Contact</a>
+			  </div>
 			</nav>
 				<script>
 					function toggleMenu() {
 					  document.getElementById("appomNav").classList.toggle("active");
+					  document.getElementById("menuToggle").classList.toggle("open");
 					}
+					// Close menu when a link is clicked
+					document.querySelectorAll('.appom-nav a').forEach(function(link) {
+					  link.addEventListener('click', function() {
+					    document.getElementById("appomNav").classList.remove("active");
+					    document.getElementById("menuToggle").classList.remove("open");
+					  });
+					});
 				</script>
 	
 				<!-- One -->
@@ -314,7 +325,7 @@ The current field of production that is available for our bigger entourage mainl
 					</section>
 -->
 				<!-- Seven -->
-					<section class="wrapper style1 align-center">
+					<section id="contact" class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
 							<form method="post" action="#">
@@ -340,17 +351,16 @@ The current field of production that is available for our bigger entourage mainl
 						</div>
 					</section>
 
-				<!-- Footer -->
+					<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
 							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p class="footer-tagline">"What we sell is what we eat"</p>
+							<p>&copy; 2024 APPOM &mdash; Traditional Lebanese Natural Products, Kfardebian.</p>
 						</div>
 					</footer>
 
